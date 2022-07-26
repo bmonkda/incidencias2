@@ -67,7 +67,8 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    // 'timezone' => 'UTC',
+    'timezone' => 'America/Caracas',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +109,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    // 'faker_locale' => 'en_US',
     'faker_locale' => 'es_ES',
 
     /*
