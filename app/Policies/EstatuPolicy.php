@@ -2,11 +2,11 @@
 
 namespace App\Policies;
 
-use App\Models\Emergecy;
+use App\Models\Estatu;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class EmergecyPolicy
+class EstatuPolicy
 {
     use HandlesAuthorization;
 
@@ -25,10 +25,10 @@ class EmergecyPolicy
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Estatu  $estatu
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Emergecy $emergecy)
+    public function view(User $user, Estatu $estatu)
     {
         //
     }
@@ -48,10 +48,10 @@ class EmergecyPolicy
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Estatu  $estatu
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, Emergecy $emergecy)
+    public function update(User $user, Estatu $estatu)
     {
         //
     }
@@ -60,10 +60,10 @@ class EmergecyPolicy
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Estatu  $estatu
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, Emergecy $emergecy)
+    public function delete(User $user, Estatu $estatu)
     {
         //
     }
@@ -72,10 +72,10 @@ class EmergecyPolicy
      * Determine whether the user can restore the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Estatu  $estatu
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function restore(User $user, Emergecy $emergecy)
+    public function restore(User $user, Estatu $estatu)
     {
         //
     }
@@ -84,10 +84,10 @@ class EmergecyPolicy
      * Determine whether the user can permanently delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Estatu  $estatu
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function forceDelete(User $user, Emergecy $emergecy)
+    public function forceDelete(User $user, Estatu $estatu)
     {
         //
     }

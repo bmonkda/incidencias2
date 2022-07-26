@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Emergecy;
-use App\Http\Requests\StoreEmergecyRequest;
-use App\Http\Requests\UpdateEmergecyRequest;
+use App\Models\Emergency;
+use App\Http\Requests\StoreEmergencyRequest;
+use App\Http\Requests\UpdateEmergencyRequest;
 
-class EmergecyController extends Controller
+class EmergencyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class EmergecyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreEmergecyRequest  $request
+     * @param  \App\Http\Requests\StoreEmergencyRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEmergecyRequest $request)
+    public function store(StoreEmergencyRequest $request)
     {
         //
     }
@@ -42,10 +42,10 @@ class EmergecyController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Emergency  $emergency
      * @return \Illuminate\Http\Response
      */
-    public function show(Emergecy $emergecy)
+    public function show(Emergency $emergency)
     {
         //
     }
@@ -53,10 +53,10 @@ class EmergecyController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Emergency  $emergency
      * @return \Illuminate\Http\Response
      */
-    public function edit(Emergecy $emergecy)
+    public function edit(Emergency $emergency)
     {
         //
     }
@@ -64,11 +64,11 @@ class EmergecyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateEmergecyRequest  $request
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Http\Requests\UpdateEmergencyRequest  $request
+     * @param  \App\Models\Emergency  $emergency
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateEmergecyRequest $request, Emergecy $emergecy)
+    public function update(UpdateEmergencyRequest $request, Emergency $emergency)
     {
         //
     }
@@ -76,10 +76,10 @@ class EmergecyController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Emergecy  $emergecy
+     * @param  \App\Models\Emergency  $emergency
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Emergecy $emergecy)
+    public function destroy(Emergency $emergency)
     {
         //
     }

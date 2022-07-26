@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEmergeciesTable extends Migration
+class CreateSubcategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateEmergeciesTable extends Migration
      */
     public function up()
     {
-        Schema::create('emergecies', function (Blueprint $table) {
+        Schema::create('subcategories', function (Blueprint $table) {
             $table->id();
+
+            $table->string('name');
+            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateEmergeciesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emergecies');
+        Schema::dropIfExists('subcategories');
     }
 }
