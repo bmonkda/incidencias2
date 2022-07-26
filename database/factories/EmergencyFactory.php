@@ -14,7 +14,7 @@ class EmergencyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->unique()->word(2),
         ];
     }
 }
