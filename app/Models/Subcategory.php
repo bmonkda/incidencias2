@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Subcategory extends Model
 {
     use HasFactory;
+
+    // Relación uno a muchos
+
+    public function incidents(){
+        return $this->hasMany(Incident::class);
+    }
+    
 }
