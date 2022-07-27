@@ -2,6 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Emergency;
+use App\Models\Estatu;
+use App\Models\Subcategory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class IncidentFactory extends Factory
@@ -14,7 +18,11 @@ class IncidentFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'description' => $this->faker->text(2000),
+            'user_id' => User::all()->random()->id,
+            'subcategory_id' => Subcategory::all()->random()->id,
+            'emergency_id' => Emergency::all()->random()->id,
+            'estatu_id' => Estatu::all()->random()->id,
         ];
     }
 }
