@@ -42,6 +42,26 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // Para AdminLTE
+
+    public function adminlte_image(){
+        return 'https://picsum.photos/300/300';
+        // return $this->profile_photo_url;
+    }
+
+    public function adminlte_desc()
+    {
+        // modificar código cuando se haga tabla de roles
+        // return rol del usuario;
+        return 'Administrador';
+    }
+
+    public function adminlte_profile_url()
+    {
+        return 'profile/username';
+    }
+
+
     // Relación uno a muchos
 
     public function incidents(){
