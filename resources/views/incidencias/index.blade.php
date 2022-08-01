@@ -13,7 +13,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Incidencia</th>
+                            {{-- <th>Incidencia</th> --}}
                             <th>Usuario</th>
                             <th>Categoría</th>
                             <th>Prioridad</th>
@@ -26,11 +26,11 @@
                         @foreach ($incidencias as $incidencia)
                             <tr>
                                 <td>{{ $incidencia->id }}</td>
-                                <td>{{ $incidencia->description }}</td>
-                                <td>{{ $incidencia->user_id }}</td>
-                                <td>{{ $incidencia->subcategory_id }}</td>
-                                <td>{{ $incidencia->emergency_id }}</td>
-                                <td>{{ $incidencia->estatu_id }}</td>
+                                {{-- <td>{{ $incidencia->description }}</td> --}}
+                                <td>{{ $incidencia->user->name }}</td>
+                                <td>{{ $incidencia->subcategory->category->name }}</td>
+                                <td>{{ $incidencia->emergency->name }}</td>
+                                <td>{{ $incidencia->estatu->name }}</td>
     
                                 <td width="10px">
                                     {{-- <a href="{{ route('incidencias.edit', $incidencia) }}" class="btn btn-primary bt-sm">Editar</a> --}}

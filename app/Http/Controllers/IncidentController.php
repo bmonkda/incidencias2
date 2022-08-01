@@ -16,12 +16,12 @@ class IncidentController extends Controller
     public function index()
     {
         // $incidencias = Incident::all();
-        // $incidencias = Incident::paginate(10);
-        $incidencias = Incident::where('user_id', auth()->id())
+        $incidencias = Incident::paginate(10);
+        // $incidencias = Incident::where('user_id', auth()->id())
                 // ->where('estatu_id', '!=' , 4)
-                ->orderBy('estatu_id', 'asc')
-                // ->latest('estatu_id')
-                ->paginate(5);
+                // ->orderBy('estatu_id', 'asc')
+        //         // ->latest('estatu_id')
+                // ->paginate(5);
         // return $incidencias;
         return view('incidencias.index', compact('incidencias'));
     }
