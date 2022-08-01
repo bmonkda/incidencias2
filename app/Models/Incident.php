@@ -15,6 +15,14 @@ class Incident extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function emergency(){
+        return $this->belongsTo(Emergency::class);
+    }
+    
+    public function estatu(){
+        return $this->belongsTo(Estatu::class);
+    }
+
     public function category(){
         return $this->belongsTo(Category::class);
     }
