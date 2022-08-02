@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Incident;
 use App\Http\Requests\StoreIncidentRequest;
 use App\Http\Requests\UpdateIncidentRequest;
+use App\Models\Category;
+use App\Models\Emergency;
+use App\Models\Subcategory;
 
 class IncidentController extends Controller
 {
@@ -33,7 +36,13 @@ class IncidentController extends Controller
      */
     public function create()
     {
-        return view('incidencias.create');
+        $categorias = Category::all();
+        $subcategorias = Subcategory::all();
+        $urgencias = Emergency::all();
+
+        // return [$categorias, $subcategorias, $urgencias];
+        
+        return view('incidencias.create', compact(['categorias', 'subcategorias', 'urgencias']));
     }
 
     /**
@@ -91,4 +100,13 @@ class IncidentController extends Controller
     {
         //
     }
+
+    public function category(Category $category){
+        $incidencias = Incident::where('category_id', $category->id)
+                        ->where('estatus', 2)   
+                        ->latest('id')
+                        ->paginate(5);
+        return view('incidencias.category',compact('incidencias', 'category'));
+    }
+
 }

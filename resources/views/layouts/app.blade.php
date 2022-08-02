@@ -41,5 +41,8 @@
             @yield('content')
         </main>
     </div>
+
+    @livewireScripts
+    
 </body>
 </html>
