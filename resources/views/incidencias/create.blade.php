@@ -15,26 +15,18 @@
                 <div class="card-body">
                 
                     {{-- col-sm --}}
+                  <div class="">
                   {{-- <div class="col-sm-3"> --}}
+                  {{-- <div class="relative flex items-center justify-between h-16"> --}}
 
                     <form action="" method="POST">
 
                         @csrf
                 
                         <label for="">
-                            {{-- Categoría: --}}
-                            <br>
                             
                             @livewire('selector')
                             
-                            {{-- <select class="form-control">
-                                <option value="">Seleccione una categoría</option>
-                                @foreach ($categorias as $categoria)
-                                    <option value="{{ $categoria->id }}">{{ $categoria->name }}</option>
-                                @endforeach
-
-                            </select> --}}
-                            {{-- <input type="text" name="name" value="{{old('name')}}"> --}}
                         </label>
                 
                         {{-- @error('name')
@@ -44,30 +36,9 @@
                         @enderror --}}
                 
                         <br>
-                        <label>
-                            {{-- Subcategoría: --}}
-                            <br>
-                            {{-- <input type="text" name="categoria" value="{{old('categoria')}}"> --}}
-                            {{-- <select class="form-control">
-                                <option value="">Seleccione una subcategoría</option>
-                                @foreach ($subcategorias as $subcategoria)
-                                    <option value="{{ $subcategoria->id }}">{{ $subcategoria->name }}</option>
-                                @endforeach
-                                console.log($subcategorias);
-                            </select> --}}
-                        </label>
-                        
-                
-                        {{-- @error('descripcion')
-                            <br>
-                            <small>*{{$message}}</small>
-                            <br>
-                        @enderror --}}
-                
-                        <br>
-                        <label>
+                        <label class="mr-20">
                             Urgencia:
-                            <br>
+                            {{-- <br> --}}
                             {{-- <input type="text" name="categoria" value="{{old('categoria')}}"> --}}
                             <select class="form-control">
                                 <option value="">Seleccione una urgencia</option>
@@ -83,15 +54,15 @@
                             <br>
                         @enderror --}}
 
-                        <br>
-                        <label>
+                        {{-- <br> --}}
+                        <label class="ml-2">
                             ¿Desea informe de seguimiento?
                             <br>
                             {{-- <input type="text" name="categoria" value="{{old('categoria')}}"> --}}
                             <select class="form-control">
                                 <option class="disabled=false" value="">Seleccione una opción</option>
-                                <option value="0">No</option>
-                                <option value="1">Si</option>
+                                <option value="0">NO</option>
+                                <option value="1">SI</option>
                             </select>
                         </label>
 
@@ -117,7 +88,7 @@
                         <a class="btn btn-primary btn-sm" href="#">Enviar Formulario</a>
                     </form>
 
-                  {{-- </div> --}}
+                  </div>
                 
                 </div>
                 

@@ -2,7 +2,9 @@
 
 @section('content')
     
-    <div class="container py-5">
+    {{-- <div class="container py-5"> --}}
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        
 
         <a class="btn btn-success btn-sm float-right" href="{{ route('incidencias.create') }}">Nueva incidencia</a>
         <h1 class="uppercase text-center text-3xl font-bold">Lista de Incidencias</h1>
