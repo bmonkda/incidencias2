@@ -21,7 +21,7 @@ class Selector extends Component
     {
         $this->subcategories = Subcategory::where('category_id', $valor)->get();
 
-        $this->subcategory = $this->subcategories->first()->category_id ?? null;
+        $this->subcategory = $this->subcategories->first()->id ?? null;
 
     }
 

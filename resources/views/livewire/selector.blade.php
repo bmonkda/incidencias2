@@ -1,24 +1,24 @@
 <div>
-    <div class="col-md-6">
+    <div class="col-md-12">
         <label>Categoria</label>
-        <select class="form-control" wire:model="subcategory" >
-            <option value="">Seleccione una categoría</option>
+        <select class="form-control" wire:model="category" >
+            <option value="0">Seleccione una categoría</option>
             @foreach ($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
         </select>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12 mt-2">
         <label>Subcategoria</label>
-        <select class="form-control" wire:model="category">
+        <select class="form-control" wire:model="subcategory">
             
-            @if ($categories->count() == 0)
-                <option value="">Seleccione una subcategoría</option>
+            @if ($subcategories->count() == 0)
+                <option value="">Debe seleccionar una categoria</option>
             @endif
 
-            @foreach ($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @foreach ($subcategories as $subcategory)
+                <option value="{{ $subcategory->id }}">{{ $subcategory->name }}</option>
             @endforeach
 
         </select>

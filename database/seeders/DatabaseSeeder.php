@@ -28,9 +28,14 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
         Category::factory(4)->create();
-        Subcategory::factory(50)->create();
-        Emergency::factory(3)->create();
-        Estatu::factory(4)->create();
+        Subcategory::factory(12)->create();
+        
+        // Emergency::factory(3)->create();
+        $this->call(EmergencySeeder::class);
+
+        // Estatu::factory(4)->create();
+        $this->call(EstatuSeeder::class);
+
         $this->call(IncidentSeeder::class);
         
     }

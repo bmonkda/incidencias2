@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Emergency;
 use Illuminate\Database\Seeder;
 
 class EmergencySeeder extends Seeder
@@ -13,6 +14,16 @@ class EmergencySeeder extends Seeder
      */
     public function run()
     {
-        //
+        $emergency = Emergency::create([
+            'name' => 'BAJA',
+        ]);
+
+        $emergency = Emergency::create([
+            'name' => 'MEDIA',
+        ]);
+
+        $emergency = Emergency::create([
+            'name' => 'ALTA',
+        ]);
     }
 }

@@ -6,7 +6,7 @@
     
     <div class="container py-5">
         
-        <a class="btn btn-success btn-sm float-right" href="#">Nueva incidencia</a>
+        {{-- <a class="btn btn-success btn-sm float-right" href="#">Nueva incidencia</a> --}}
         <h1 class="uppercase text-center text-3xl font-bold">Creación de Incidencias</h1>
 
         <div class="card">
@@ -22,18 +22,18 @@
                         @csrf
                 
                         <label for="">
-                            Categoría:
+                            {{-- Categoría: --}}
                             <br>
                             
                             @livewire('selector')
                             
-                            <select class="form-control">
+                            {{-- <select class="form-control">
                                 <option value="">Seleccione una categoría</option>
                                 @foreach ($categorias as $categoria)
                                     <option value="{{ $categoria->id }}">{{ $categoria->name }}</option>
                                 @endforeach
 
-                            </select>
+                            </select> --}}
                             {{-- <input type="text" name="name" value="{{old('name')}}"> --}}
                         </label>
                 
@@ -45,16 +45,16 @@
                 
                         <br>
                         <label>
-                            Subcategoría:
+                            {{-- Subcategoría: --}}
                             <br>
                             {{-- <input type="text" name="categoria" value="{{old('categoria')}}"> --}}
-                            <select class="form-control">
+                            {{-- <select class="form-control">
                                 <option value="">Seleccione una subcategoría</option>
                                 @foreach ($subcategorias as $subcategoria)
                                     <option value="{{ $subcategoria->id }}">{{ $subcategoria->name }}</option>
                                 @endforeach
                                 console.log($subcategorias);
-                            </select>
+                            </select> --}}
                         </label>
                         
                 
@@ -113,7 +113,8 @@
                         <label>Examinar para imagenes</label>
                 
                         <br>
-                        <button class="btn btn-primary btn-sm" type="submit">Enviar Formulario</button>
+                        {{-- <button class="btn btn-primary btn-sm" type="submit">Enviar Formulario</button> --}}
+                        <a class="btn btn-primary btn-sm" href="#">Enviar Formulario</a>
                     </form>
 
                   {{-- </div> --}}
