@@ -16,6 +16,7 @@ class CreateIncidentsTable extends Migration
         Schema::create('incidents', function (Blueprint $table) {
             $table->id();
 
+            $table->text('titulo');
             $table->longText('description')->nullable();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             // $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');

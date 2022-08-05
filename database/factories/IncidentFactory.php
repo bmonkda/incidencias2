@@ -18,6 +18,8 @@ class IncidentFactory extends Factory
     public function definition()
     {
         return [
+
+            'titulo' => $this->faker->text(150),
             'description' => $this->faker->text(2000),
             'user_id' => User::all()->random()->id,
             'subcategory_id' => Subcategory::all()->random()->id,
